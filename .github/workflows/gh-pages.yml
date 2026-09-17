@@ -1,0 +1,81 @@
+name: Deploy SPA to GitHub Pages
+
+# apps/web is a TanStack Start app that is server-rendered (SSR) everywhere else, but GitHub Pages
+# only serves static files with no server runtime. Every push to main queues a run of this
+# workflow automatically (workflow_dispatch is also available for a manual run) - but the job
+# below targets the gh-pages GitHub Environment, so the run always pauses and needs exactly one
+# click ("Review deployments" -> "Approve and deploy") from a required reviewer (configured on
+# GitHub itself, not in this file - see the environment's protection rules in repo settings)
+# before the build actually starts.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gh-pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    # Belt-and-suspenders with the gh-pages environment's own branch policy (which already
+    # restricts deployments to main): push events here are already main-only per the trigger
+    # above, but workflow_dispatch lets a caller pick any branch/ref to run against, so this guard
+    # makes the job a no-op if anything other than main is chosen.
+    if: github.ref == 'refs/heads/main'
+    environment: gh-pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # apps/web/vite.gh-pages.config.ts is a separate, GitHub-Pages-only Vite config (SPA mode +
+      # /mtlic/ basepath - see that file for why). It is never used for local dev/build/tests, so
+      # it's swapped in here rather than branching on an env var inside vite.config.ts itself.
+      - name: Switch to the GitHub Pages Vite config
+        run: cp apps/web/vite.gh-pages.config.ts apps/web/vite.config.ts
+
+      # apps/web's own `prebuild` script builds packages/sha256 and packages/license first.
+      - name: Build apps/web as a static SPA
+        run: pnpm --filter @mtlic/web run build
+
+      # SPA mode only prerenders the root shell as dist/client/_shell.html (see
+      # https://tanstack.com/start/latest/docs/framework/react/guide/spa-mode) - GitHub Pages has
+      # no server to rewrite requests to it, so it must also be index.html for the site root and
+      # 404.html so Pages falls back to the same shell for any other path (this app only has one
+      # route today, which reads its state from query params rather than path segments, but the
+      # fallback is kept for any route added later).
+      - name: Promote the SPA shell to index.html and 404.html
+        run: |
+          cd apps/web/dist/client
+          cp _shell.html index.html
+          cp _shell.html 404.html
+
+      # GitHub Pages ignores files/folders starting with an underscore (its Jekyll processing
+      # step) unless this marker file is present - dist/client/_shell.html and dist/client/assets
+      # would otherwise not be served.
+      - name: Disable Jekyll processing
+        run: touch apps/web/dist/client/.nojekyll
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: apps/web/dist/client

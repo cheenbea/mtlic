@@ -1,0 +1,11 @@
+{
+  "private_key_hex": "0BAD10F55D25B46D50738ED9227342A0222800BCC15D9EF9F30D8FBFBAF4C735",
+  "nonce_secret": "987654321098765432109876543210987654321098765432109876543210",
+  "pubkey_x_hex": "16de38cdde0f026c4dc82e93d04544f82c25267bd441eac1a85a2ddbfb08101a",
+  "pubkey_y_hex": "6e6c54c2968707f3bd17ce835b90d4e55c5ff785a2a6b588a049a96f082c6aca",
+  "data16_hex": "aabbccddeeff00112233445566778899",
+  "tampered_data16_hex": "55bbccddeeff00112233445566778899",
+  "signature_hex": "3a1ef77274ca8a2819695a1bf90c4b9c0455ca9765cc429d9b8d4ddf5bfe1e6334a559231326bdb8f71caa270c8fc90f",
+  "verify_with_point_correct": true,
+  "verify_with_point_tampered": false
+}

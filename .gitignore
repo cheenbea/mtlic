@@ -5,6 +5,19 @@ node_modules/
 dist/
 build/
 
+# TanStack Router — regenerated on every dev/build run, never hand-edited
+routeTree.gen.ts
+
+# TanStack Start / Nitro tooling cache
+.tanstack/
+
+# TypeScript incremental build info
+*.tsbuildinfo
+
+# Stray per-file .d.ts sometimes left in src/ by tsdown's typescript@7 (preview) dts step -
+# packages/*/dist/*.d.mts is the real, correct, rolled-up declaration output; these are not.
+src/**/*.d.ts
+
 # Environment
 .env
 .env.*

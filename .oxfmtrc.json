@@ -1,0 +1,4 @@
+{
+  "singleQuote": true,
+  "ignorePatterns": ["**/__tests__/fixtures/**"]
+}

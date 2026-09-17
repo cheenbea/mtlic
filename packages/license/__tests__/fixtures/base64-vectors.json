@@ -1,0 +1,172 @@
+[
+  {
+    "hex": "",
+    "pad": false,
+    "b64": ""
+  },
+  {
+    "hex": "",
+    "pad": true,
+    "b64": ""
+  },
+  {
+    "hex": "e1",
+    "pad": false,
+    "b64": "hD"
+  },
+  {
+    "hex": "e1",
+    "pad": true,
+    "b64": "hD=="
+  },
+  {
+    "hex": "3b03",
+    "pad": false,
+    "b64": "7MA"
+  },
+  {
+    "hex": "3b03",
+    "pad": true,
+    "b64": "7MA="
+  },
+  {
+    "hex": "2e112a",
+    "pad": false,
+    "b64": "uEhK"
+  },
+  {
+    "hex": "2e112a",
+    "pad": true,
+    "b64": "uEhK"
+  },
+  {
+    "hex": "32b57908",
+    "pad": false,
+    "b64": "yUbeIA"
+  },
+  {
+    "hex": "32b57908",
+    "pad": true,
+    "b64": "yUbeIA=="
+  },
+  {
+    "hex": "0f08b1f7ed",
+    "pad": false,
+    "b64": "PgQs33O"
+  },
+  {
+    "hex": "0f08b1f7ed",
+    "pad": true,
+    "b64": "PgQs33O="
+  },
+  {
+    "hex": "4c2e5d3a07f9",
+    "pad": false,
+    "b64": "M5SX6cQ+"
+  },
+  {
+    "hex": "4c2e5d3a07f9",
+    "pad": true,
+    "b64": "M5SX6cQ+"
+  },
+  {
+    "hex": "7f21ee232d178a",
+    "pad": false,
+    "b64": "/Fi7j0yFKC"
+  },
+  {
+    "hex": "7f21ee232d178a",
+    "pad": true,
+    "b64": "/Fi7j0yFKC=="
+  },
+  {
+    "hex": "209af6b5887f66e8",
+    "pad": false,
+    "b64": "gop91i4fmhO"
+  },
+  {
+    "hex": "209af6b5887f66e8",
+    "pad": true,
+    "b64": "gop91i4fmhO="
+  },
+  {
+    "hex": "092402aa49f2c1551b27fe53266e49",
+    "pad": false,
+    "b64": "JQiAqmk8BX1Gn4/Um4WS"
+  },
+  {
+    "hex": "092402aa49f2c1551b27fe53266e49",
+    "pad": true,
+    "b64": "JQiAqmk8BX1Gn4/Um4WS"
+  },
+  {
+    "hex": "0db138489ce814d58d145a8b4f994fed",
+    "pad": false,
+    "b64": "NELOIxJ6UUdjUo1iPl5TtD"
+  },
+  {
+    "hex": "0db138489ce814d58d145a8b4f994fed",
+    "pad": true,
+    "b64": "NELOIxJ6UUdjUo1iPl5TtD=="
+  },
+  {
+    "hex": "15c5b2fdaeeff317f157e1e0978c3f5fd5",
+    "pad": false,
+    "b64": "VUss9767zfR8XFO4Xy4PfVN"
+  },
+  {
+    "hex": "15c5b2fdaeeff317f157e1e0978c3f5fd5",
+    "pad": true,
+    "b64": "VUss9767zfR8XFO4Xy4PfVN="
+  },
+  {
+    "hex": "df3d34f8c08262b03750894fa5e42428ca6d189213702ca29ceb218325da6733",
+    "pad": false,
+    "b64": "f3DN4DsgiB7NQl4TlSOJoocbYI5EwxiocueIDWi2nND"
+  },
+  {
+    "hex": "df3d34f8c08262b03750894fa5e42428ca6d189213702ca29ceb218325da6733",
+    "pad": true,
+    "b64": "f3DN4DsgiB7NQl4TlSOJoocbYI5EwxiocueIDWi2nND="
+  },
+  {
+    "hex": "cb63eb78b869d759689a1eb44efff1aa474318544a23a657001f2c4b6f14ddc8a66ac38f9bd8a34d2f858ed2cc8d3ac0",
+    "pad": false,
+    "b64": "LP264hbaXnFaa6BtO9f8qe0QYQlSjY6VA8BLL9GFdjspqN8jbi9oN9ShOKNzNqDw"
+  },
+  {
+    "hex": "cb63eb78b869d759689a1eb44efff1aa474318544a23a657001f2c4b6f14ddc8a66ac38f9bd8a34d2f858ed2cc8d3ac0",
+    "pad": true,
+    "b64": "LP264hbaXnFaa6BtO9f8qe0QYQlSjY6VA8BLL9GFdjspqN8jbi9oN9ShOKNzNqDw"
+  },
+  {
+    "hex": "8c6d98cb1ab2e177fb54c29d0125f5ca98dbf55fcdf45090bdb16956eaf20eef350dbbf32147a9b29498a996638e2568adaba4ea882b3d7d83be460eca1316",
+    "pad": false,
+    "b64": "M2GmLrhshf3+UJcnBUS9Kj521/Vz0DFk9GbaWpu8O8eNNs78hcUqySJmpa5YOWCatuKpqj4K903g+akDKPhF"
+  },
+  {
+    "hex": "8c6d98cb1ab2e177fb54c29d0125f5ca98dbf55fcdf45090bdb16956eaf20eef350dbbf32147a9b29498a996638e2568adaba4ea882b3d7d83be460eca1316",
+    "pad": true,
+    "b64": "M2GmLrhshf3+UJcnBUS9Kj521/Vz0DFk9GbaWpu8O8eNNs78hcUqySJmpa5YOWCatuKpqj4K903g+akDKPhF"
+  },
+  {
+    "hex": "6a4fa0b5de239c85f870b22a09a97553f4ff47224a7c54c9a742e414be23bcd11624a07465b1c2fc1a0fe52996daae4bf87b0fb6bed45926096c6448438219ef",
+    "pad": false,
+    "b64": "q9Eo169IcWI+wJrKJkadTR//HJiS8RVynKE5U47I8GtFkAKdlFrw8rxDlnila76S4v3D26L1ZZSCsRGSDJYGvD"
+  },
+  {
+    "hex": "6a4fa0b5de239c85f870b22a09a97553f4ff47224a7c54c9a742e414be23bcd11624a07465b1c2fc1a0fe52996daae4bf87b0fb6bed45926096c6448438219ef",
+    "pad": true,
+    "b64": "q9Eo169IcWI+wJrKJkadTR//HJiS8RVynKE5U47I8GtFkAKdlFrw8rxDlnila76S4v3D26L1ZZSCsRGSDJYGvD=="
+  },
+  {
+    "hex": "b9be93cbd0bc779204a0883d126fbd5ea495b98b5ae95601d17a62e38b59b5d1f8f6f5e3be34cd4136f0f93143837a24abc896b5cf60f2eea3e237ed2b26655aab",
+    "pad": false,
+    "b64": "567kLDNv3JJBgiYPS8WveRal5uoWpbVARrnYjvYW1GN+2X/4+STzBZD85HzQDqHJrisl1+MYy7+oifT7rYSZatK"
+  },
+  {
+    "hex": "b9be93cbd0bc779204a0883d126fbd5ea495b98b5ae95601d17a62e38b59b5d1f8f6f5e3be34cd4136f0f93143837a24abc896b5cf60f2eea3e237ed2b26655aab",
+    "pad": true,
+    "b64": "567kLDNv3JJBgiYPS8WveRal5uoWpbVARrnYjvYW1GN+2X/4+STzBZD85HzQDqHJrisl1+MYy7+oifT7rYSZatK="
+  }
+]

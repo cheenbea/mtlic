@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "strictNullChecks": true,
+    "types": ["vite/client", "node"],
+    "paths": {
+      "@mtlic/sha256": ["../../packages/sha256/src/index.ts"],
+      "@mtlic/license": ["../../packages/license/src/index.ts"]
+    }
+  },
+  "include": ["src"]
+}

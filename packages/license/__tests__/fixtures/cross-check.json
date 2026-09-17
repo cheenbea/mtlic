@@ -1,0 +1,62 @@
+{
+  "kcdsa_sign": {
+    "private_key_hex": "0BAD10F55D25B46D50738ED9227342A0222800BCC15D9EF9F30D8FBFBAF4C735",
+    "nonce_secret": "123456789012345678901234567890123456789012345678901234567890",
+    "data16_hex": "0102030405060708090a0b0c0d0e0f10",
+    "signature_hex": "d4d9cd1131fee5cafef4348e89cc4ed4aac3863cf7ff44797e33f725b8f95e5d96488a6a3b30c512972b46fcacfa4e07",
+    "attempts": 1
+  },
+  "cipher_encode": {
+    "input_hex": "0102030405060708090a0b0c0d0e0f10",
+    "output_hex": "ac98540947d7a9ce5b99c8b4f4cf8b96"
+  },
+  "chr_license": {
+    "private_key_hex": "0BAD10F55D25B46D50738ED9227342A0222800BCC15D9EF9F30D8FBFBAF4C735",
+    "nonce_secret": "123456789012345678901234567890123456789012345678901234567890",
+    "system_id": "eJq8zK/UrhN",
+    "deadline": 4102444800,
+    "level": 3,
+    "data16_hex": "5ea2f2b3f2536bd8005786f403000000",
+    "hdr_hex": "b9067913b94149dedf4c25626888677b",
+    "signature_hex": "d4d9cd1131fee5cafef4348e89cc4ed4503b44bc80bd91a4cfe34f5f7052ecc30b7448b4af9979cd1664e706697df906",
+    "license_text": "-----BEGIN MIKROTIK SOFTWARE KEY------------\n5aQeTkbQJ593MViYoh4Z7Rd2NHRM+Xuy+TPNOmIzORNU\n7QEvA2bkk+84P9FcSx+wLQHS0+am51sFkduBp1X+GA==\n-----END MIKROTIK SOFTWARE KEY--------------\n"
+  },
+  "software_id_license": {
+    "private_key_hex": "0BAD10F55D25B46D50738ED9227342A0222800BCC15D9EF9F30D8FBFBAF4C735",
+    "nonce_secret": "123456789012345678901234567890123456789012345678901234567890",
+    "software_id": "AB12-CD34",
+    "major": 7,
+    "level": 6,
+    "groups": 1,
+    "data16_hex": "0f1acb89bc0007160000000000000000",
+    "hdr_hex": "8b4d2ed8bfb66c17c170eb29806d9739",
+    "signature_hex": "d4d9cd1131fee5cafef4348e89cc4ed40ca6c63788813cacdf5044038b2a27ae09d5781caced00d2593f6927e92c0506",
+    "license_text": "-----BEGIN MIKROTIK SOFTWARE KEY------------\nL2kLY/rtsdRwwteKA22l5Qd2NHRM+Xuy+TPNOmIzORND\nma8NIGIPs+NUENwiqcirJUNecwa7AIdW/k2JpzSBGA==\n-----END MIKROTIK SOFTWARE KEY--------------\n"
+  },
+  "software_id_decode": [
+    {
+      "software_id": "AB12-CD34",
+      "expected_decimal_string": "809765640719"
+    },
+    {
+      "software_id": "0000-0000",
+      "expected_decimal_string": "132463258272"
+    },
+    {
+      "software_id": "ZZZZ-ZZZZ",
+      "expected_decimal_string": "728547920496"
+    },
+    {
+      "software_id": "AAAA-AAAA",
+      "expected_decimal_string": "927242807904"
+    },
+    {
+      "software_id": "1234-5678",
+      "expected_decimal_string": "480589202001"
+    },
+    {
+      "software_id": "XY9Z-KL0M",
+      "expected_decimal_string": "1935000921670"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "paths": {
+      "@mtlic/sha256": ["../sha256/src/index.ts"]
+    }
+  },
+  "include": ["src", "__tests__"]
+}

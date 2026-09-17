@@ -1,0 +1,254 @@
+[
+  {
+    "system_id": "AAAAAAAAAAA",
+    "expected_decimal_string": "0"
+  },
+  {
+    "system_id": "//////////P",
+    "expected_decimal_string": "18446744073709551615"
+  },
+  {
+    "system_id": "EdKTf1wLnAG",
+    "expected_decimal_string": "6928558286212736836"
+  },
+  {
+    "system_id": "O21DVpLVA0A",
+    "expected_decimal_string": "936841881760783758"
+  },
+  {
+    "system_id": "F6yWlF3/goN",
+    "expected_decimal_string": "15717843562019892869"
+  },
+  {
+    "system_id": "Vtf8pcdMnFL",
+    "expected_decimal_string": "12783240867505896277"
+  },
+  {
+    "system_id": "u/OS+N6yo+H",
+    "expected_decimal_string": "9198826141963055086"
+  },
+  {
+    "system_id": "gTeKrrzY7eG",
+    "expected_decimal_string": "7474677111256114400"
+  },
+  {
+    "system_id": "M/DIVYqqWsK",
+    "expected_decimal_string": "12328228660269039564"
+  },
+  {
+    "system_id": "Vb6eDy3MyWJ",
+    "expected_decimal_string": "10786740667380639445"
+  },
+  {
+    "system_id": "wrUVZljt7QH",
+    "expected_decimal_string": "8375488289453722352"
+  },
+  {
+    "system_id": "x6RcdjBIw3H",
+    "expected_decimal_string": "9074788540318031537"
+  },
+  {
+    "system_id": "lM6G3nchuWP",
+    "expected_decimal_string": "17703234287720702757"
+  },
+  {
+    "system_id": "6wHnw1eAkWM",
+    "expected_decimal_string": "14241510040960531514"
+  },
+  {
+    "system_id": "sJ9AkoBbWbF",
+    "expected_decimal_string": "6257307591807062636"
+  },
+  {
+    "system_id": "Z+JE48G2+mF",
+    "expected_decimal_string": "6466844087144193945"
+  },
+  {
+    "system_id": "D35rv+pU9gN",
+    "expected_decimal_string": "15581701131572583875"
+  },
+  {
+    "system_id": "LOXuQGqOSDC",
+    "expected_decimal_string": "2365017219915150219"
+  },
+  {
+    "system_id": "3qoCkzedGHJ",
+    "expected_decimal_string": "10504212841186888375"
+  },
+  {
+    "system_id": "NN9RPGo2WZD",
+    "expected_decimal_string": "3915557176034710349"
+  },
+  {
+    "system_id": "o28OEUVBvlG",
+    "expected_decimal_string": "7597296959098703272"
+  },
+  {
+    "system_id": "yYwzh8effGK",
+    "expected_decimal_string": "11646165627421263410"
+  },
+  {
+    "system_id": "beMegBTCNGH",
+    "expected_decimal_string": "8182206201383667611"
+  },
+  {
+    "system_id": "wE1A8tQk4WA",
+    "expected_decimal_string": "412238844415660336"
+  },
+  {
+    "system_id": "M8erH1QUpqA",
+    "expected_decimal_string": "768234328922386188"
+  },
+  {
+    "system_id": "UwgswYIjQdJ",
+    "expected_decimal_string": "10903369205834451988"
+  },
+  {
+    "system_id": "TGeY90j2Q8C",
+    "expected_decimal_string": "3391450475967668627"
+  },
+  {
+    "system_id": "IMtRaopx/yJ",
+    "expected_decimal_string": "11294964755636605704"
+  },
+  {
+    "system_id": "jBB+0bvlewP",
+    "expected_decimal_string": "18167123934275178595"
+  },
+  {
+    "system_id": "/JyRB2niZ+P",
+    "expected_decimal_string": "18417904422752821887"
+  },
+  {
+    "system_id": "wfYZcqJ1n7G",
+    "expected_decimal_string": "7991589824306186224"
+  },
+  {
+    "system_id": "phxB9dQiOQN",
+    "expected_decimal_string": "15280301250970065001"
+  },
+  {
+    "system_id": "hLl8r6GO/rI",
+    "expected_decimal_string": "10015786144277615329"
+  },
+  {
+    "system_id": "kBlgWLRhsHH",
+    "expected_decimal_string": "8209082536744341604"
+  },
+  {
+    "system_id": "yHhPWuEjXTE",
+    "expected_decimal_string": "4960587770842976754"
+  },
+  {
+    "system_id": "gr4nHIvypOF",
+    "expected_decimal_string": "6028572717070912224"
+  },
+  {
+    "system_id": "LW4V1Hn6MSA",
+    "expected_decimal_string": "327894648059561355"
+  },
+  {
+    "system_id": "OBni/OiveSA",
+    "expected_decimal_string": "332912483218649166"
+  },
+  {
+    "system_id": "Jc5Bu1PJ9OC",
+    "expected_decimal_string": "2575255232817108745"
+  },
+  {
+    "system_id": "mWbYBtO+f4I",
+    "expected_decimal_string": "10241177766961722790"
+  },
+  {
+    "system_id": "fSbgKL7+jcC",
+    "expected_decimal_string": "2820374536984310943"
+  },
+  {
+    "system_id": "UhETyCX9IsD",
+    "expected_decimal_string": "4253919712427919444"
+  },
+  {
+    "system_id": "Lgtr01eOn7L",
+    "expected_decimal_string": "13756027278854117387"
+  },
+  {
+    "system_id": "uA6wnDvaUhI",
+    "expected_decimal_string": "9823594270114947118"
+  },
+  {
+    "system_id": "Nf+ikwp6NtM",
+    "expected_decimal_string": "14649623119255037901"
+  },
+  {
+    "system_id": "Lw4ctbQ3wRE",
+    "expected_decimal_string": "4931684613794008075"
+  },
+  {
+    "system_id": "8YyIyNcgTHF",
+    "expected_decimal_string": "5896199013591623228"
+  },
+  {
+    "system_id": "LsBW1DKj1NI",
+    "expected_decimal_string": "9472632014182554379"
+  },
+  {
+    "system_id": "JjibhBGrarP",
+    "expected_decimal_string": "18075949584356354249"
+  },
+  {
+    "system_id": "faqK1xxWMpA",
+    "expected_decimal_string": "742068216392230559"
+  },
+  {
+    "system_id": "ysAcGoTZsTH",
+    "expected_decimal_string": "8425220302793870130"
+  },
+  {
+    "system_id": "5TLAfmh2FLH",
+    "expected_decimal_string": "8270256094312445177"
+  },
+  {
+    "system_id": "xlZwEp3OzdI",
+    "expected_decimal_string": "9760210213767584113"
+  },
+  {
+    "system_id": "XDOrt4JvyXG",
+    "expected_decimal_string": "7346141329751859415"
+  },
+  {
+    "system_id": "dRPs80NyZYF",
+    "expected_decimal_string": "6204210814211126365"
+  },
+  {
+    "system_id": "s0uHTKJf0dM",
+    "expected_decimal_string": "14372249279821442348"
+  },
+  {
+    "system_id": "VN6RHm7LIYD",
+    "expected_decimal_string": "3893414351746868053"
+  },
+  {
+    "system_id": "cX4DUqObagD",
+    "expected_decimal_string": "4042663370280633820"
+  },
+  {
+    "system_id": "dtkGSR6LRBN",
+    "expected_decimal_string": "15010831415801170781"
+  },
+  {
+    "system_id": "1EYGaoDJFXB",
+    "expected_decimal_string": "1568699877173068085"
+  },
+  {
+    "system_id": "eJq8zK/UrhN",
+    "expected_decimal_string": "15594650436566688350"
+  },
+  {
+    "system_id": "mRRnGN+JnEM",
+    "expected_decimal_string": "13918137030507566182"
+  },
+  {
+    "system_id": "wR1YW+0sScI",
+    "expected_decimal_string": "9733038899107943536"
+  }
+]

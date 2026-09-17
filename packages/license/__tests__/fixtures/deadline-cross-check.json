@@ -1,0 +1,9 @@
+{
+  "fixed_now_iso": "2026-09-13T14:30:45+00:00",
+  "fixed_now_epoch": 1789309845,
+  "trial_default": 1794493845,
+  "trial_days_30": 1791901845,
+  "permanent": 4294967295,
+  "subscription_default": 1804809599,
+  "subscription_days_366": 1820879999
+}

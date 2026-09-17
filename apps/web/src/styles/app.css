@@ -1,0 +1,143 @@
+@import 'tailwindcss';
+
+/*
+ * Dark activates only via an explicit `.dark` class OR `[data-theme="dark"]` attribute on an
+ * ancestor (<html> is the natural place) - deliberately NOT tied to OS prefers-color-scheme.
+ * There's no toggle UI yet, so dark is simply unreachable in the running app right now; that's
+ * expected. Verified current v4 syntax (not guessed) - see Tailwind's dark-mode docs, "class"
+ * and "data attribute" selector-variant sections.
+ */
+@custom-variant dark (&:where(.dark, .dark *, [data-theme='dark'], [data-theme='dark'] *));
+
+@import '@fontsource/geist/400.css';
+@import '@fontsource/geist/500.css';
+@import '@fontsource/geist/600.css';
+@import '@fontsource/geist-mono/400.css';
+@import '@fontsource/geist-mono/500.css';
+
+/*
+ * Base (default, no class/attribute needed) is LIGHT - values pulled from
+ * docs/design-extractions/getdesign-md/DESIGN.md's "Light" table where that table covers the
+ * role; anything it doesn't cover (danger) is our own app's addition and had to be inferred, not
+ * extracted - noted per-token below. Dark values (the original set) live in the `.dark`/
+ * `[data-theme="dark"]` override block further down, activated via the custom variant above.
+ */
+@theme {
+  --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Geist Mono', 'SFMono-Regular', Menlo, monospace;
+
+  --color-bg: #f4f4f5; /* extracted: light --color-background */
+  --color-panel: #ffffff; /* extracted: light --color-background-100 (card fill); also used for
+                              the license output box, which no longer has its own surface color -
+                              see DESIGN.md's color table */
+  --color-border: #e2e2e2; /* extracted: light --color-border */
+  --color-panel-border: #eaeaea; /* extracted: light --color-panel-border */
+  --color-strong: #171717; /* extracted: light --color-gray-1000 / --color-contrast */
+  --color-soft: #666666; /* extracted: light --color-text-soft */
+  --color-accent: #793df9; /* changed from the extracted #a01a6d magenta to match --color-cta-bg's
+                               value exactly - one purple doing "interactive attention" everywhere
+                               (hover AND focus) instead of two accent colors for the same job.
+                               Kept as its own token, not merged into --color-cta-bg: same
+                               same-value-different-role principle as --radius-control/--radius-panel. */
+  /*
+   * CTA (light). bg/fg are their own independent per-theme decision, not shared with dark - see
+   * the dark override block below for that theme's separately-verified set. No separate border
+   * token: the Button component points the border color at this same --color-cta-bg (see
+   * LicenseGenerator.tsx's `border-cta-bg`), so the border is always identical to the fill by
+   * construction - a button reads as a flat color block, not an outlined shape, and the two can
+   * never drift out of sync the way two independently-set-but-supposed-to-match tokens could.
+   */
+  --color-cta-bg: #793df9; /* explicit user decision, not extracted - purple, replaces brand amber */
+  --color-cta-fg: #ffffff; /* white: computed WCAG contrast vs #793df9 is ~5.46:1, passes 4.5:1 at our
+                               12px button text (the old #1a1400 near-black only reached ~3.36:1 and failed) */
+  --color-danger: #b91c1c; /* INFERRED - not in the reference's palette at all (it has no error/danger role); chosen dark enough for contrast on a light background, unlike the dark theme's brighter #ff6b6b */
+
+  /*
+   * Font-size tokens, verified against https://getdesign.md/ AND https://getdesign.md/design-md
+   * via real getComputedStyle() measurements in a real browser render (not guessed, not read off
+   * a screenshot) - see the session notes for the exact numbers. --text-label is the one partial
+   * exception: neither reference page has a real <label> element to measure directly, so it's
+   * inferred from the same small-text cluster (12-13.5px) every other compact UI string on the
+   * reference site uses, not a direct like-for-like measurement the way the other three are.
+   * --text-heading is deliberately NOT set to the reference's measured 48px hero H1 - that's a
+   * marketing hero size on a public landing page, not comparable to this internal tool's page
+   * title, and matching it would make the "reads too large" complaint this pass exists to fix
+   * worse, not better. Kept at this app's pre-existing heading size instead.
+   *
+   * Second size-reduction pass: page still read too large at these sizes, so each token was
+   * reduced again to ~80%, snapped to the nearest even integer per this project's hard
+   * font-size-must-be-even rule (see DESIGN.md) - not a literal x0.8, since 12/16/24 don't have
+   * clean even x0.8 results (12->10, 16->12, 24->20). --spacing below has no evenness constraint
+   * and takes the literal x0.8 instead.
+   */
+  --text-input: 0.625rem; /* 10px - was 12px, now ~83% (nearest even to 12x0.8=9.6). Numerically
+                              equal to --text-label but kept as its own named token on the same
+                              principle as --radius-control/--radius-panel: same value now doesn't
+                              mean same role, don't collapse them. */
+  --text-label: 0.625rem; /* 10px - was 12px, same ~83% rounding (nearest even to 12x0.8=9.6) as
+                              --text-input above. Still numerically equal to --text-input, still
+                              its own token for the same "same value, different role" reason -
+                              that principle still applies. */
+  --text-body: 0.75rem; /* 12px - was 16px, nearest even to 16x0.8=12.8. Still unused by any
+                            element on this page (verified: no .tsx references text-body). */
+  --text-heading: 1.25rem; /* 20px - was 24px, ~83% (nearest even to 24x0.8=19.2) */
+
+  /*
+   * Border-radius tokens, same verification method as above. --radius-control matches
+   * getdesign.md's primary CTA button ("Request a DESIGN.md") radius exactly. --radius-panel
+   * confirms structural chrome (header, nav, feature-card strip) is flush/0px on the reference
+   * site - the "sharp corners" read some describe is real for those large structural elements,
+   * it just doesn't extend to buttons, which do have a small (4-6px) radius on close measurement.
+   */
+  /* Sharp corners everywhere, deliberate: explicit user decision, flatter than getdesign.md's
+     own measured 4px button radius on this one specific point - not a re-verification target. */
+  --radius-control: 0px;
+  --radius-panel: 0px;
+
+  /*
+   * Motion. 150ms is the one real, consistent transition-duration measured on every hover-capable
+   * interactive element on getdesign.md (color/background-color/border-color family transitions,
+   * Tailwind's default transition-colors group) - no other duration appears anywhere among the
+   * reference site's real hover transitions. Confirmed no box-shadow anywhere on the reference
+   * site either (buttons, header, nav all measured "none") - no shadow token needed here.
+   */
+  --motion-hover: 150ms;
+
+  --spacing: 3.2px; /* was 4px, literal x0.8 - unlike font-size, spacing has no evenness
+                        constraint. Same size-reduction pass as the font tokens above. */
+}
+
+/*
+ * Dark overrides - only the color roles change; font-size, radius, motion, and spacing are not
+ * theme-dependent and stay shared from the @theme block above (not duplicated here). Values are
+ * this app's original set, extracted earlier from getdesign.md's dark table (the site's only
+ * user-reachable theme, coincidentally - see docs/design-extractions/getdesign-md/DESIGN.md).
+ */
+:where(.dark, [data-theme='dark']) {
+  --color-bg: #000000;
+  --color-panel: #0a0a0a;
+  --color-border: #242424;
+  --color-panel-border: #2a2a2a;
+  --color-strong: #ededed;
+  --color-soft: #a1a1a1;
+  --color-accent: #7c3aed; /* changed from the extracted #ffb1ee pink, same reason as the light
+                               block above - matches this theme's --color-cta-bg exactly. */
+  --color-danger: #ff6b6b;
+
+  /*
+   * CTA (dark) - independently chosen and verified, not reused from light. #7c3aed is a more
+   * saturated/slightly-deeper violet than light's #793df9 (picked so white foreground text still
+   * clears WCAG AA on it - a brighter/lighter pick like #8b5cf6 was tried first and only reached
+   * ~4.23:1 with white, failing 4.5:1; #7c3aed reaches ~5.70:1). No separate border value here
+   * either, same reason as the light block above - the border color is the fill color by
+   * construction, not a second value that happens to currently match it.
+   */
+  --color-cta-bg: #7c3aed;
+  --color-cta-fg: #ffffff; /* ~5.70:1 against #7c3aed, verified - not assumed to still work from light */
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-strong);
+  font-family: var(--font-sans);
+}

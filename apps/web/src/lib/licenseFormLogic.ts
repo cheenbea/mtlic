@@ -157,7 +157,7 @@ export function initialFormValuesFromSearch(
   search: LicenseGeneratorSearch,
   idMode: IdMode,
 ): FormValues {
-  const licenseType = parseLicenseTypeParam(search.type) ?? 'subscription';
+  const licenseType = parseLicenseTypeParam(search.type) ?? 'permanent';
   const idValue = idMode === 'softwareId' ? search.softwareId : search.systemId;
   const levelOptions = levelOptionsForMode(idMode);
   const levelFallback = defaultLevelForMode(idMode);
